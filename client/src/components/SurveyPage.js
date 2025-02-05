@@ -3,54 +3,54 @@ import '../App.css';
 
 function SurveyPage() {
   const [selectedCuisines, setSelectedCuisines] = useState([]);
-
   const cuisines = [
-    { name: 'Italian 🍝', value: 'italian' },
-    { name: 'Chinese 🥡', value: 'chinese' },
-    { name: 'Mexican 🌮', value: 'mexican' },
-    { name: 'Indian 🍛', value: 'indian' },
-    { name: 'Japanese 🍣', value: 'japanese' },
-    { name: 'French 🥖', value: 'french' },
-    { name: 'Mediterranean 🥗', value: 'mediterranean' },
-    { name: 'American 🍔', value: 'american' },
+    { name: 'Italian', image: '/images/italian.jpg' },
+    { name: 'Chinese', image: '/images/chinese.jpg' },
+    { name: 'Mexican', image: '/images/mexican.jpg' },
+    { name: 'Indian', image: '/images/indian.jpg' },
+    { name: 'Japanese', image: '/images/japanese.jpg' },
+    { name: 'French', image: '/images/french.jpg' },
+    { name: 'Mediterranean', image: '/images/mediterranean.jpg' },
+    { name: 'American', image: '/images/american.jpg' },
   ];
 
-  const handleCuisineSelect = (value) => {
-    if (selectedCuisines.includes(value)) {
-      setSelectedCuisines(selectedCuisines.filter((c) => c !== value));
+  const handleCuisineClick = (cuisineName) => {
+    if (selectedCuisines.includes(cuisineName)) {
+      // If already selected, remove it
+      setSelectedCuisines(selectedCuisines.filter((name) => name !== cuisineName));
     } else if (selectedCuisines.length < 3) {
-      setSelectedCuisines([...selectedCuisines, value]);
+      // Add cuisine if less than 3 are selected
+      setSelectedCuisines([...selectedCuisines, cuisineName]);
     }
   };
 
-  const handleSubmit = () => {
-    console.log('Selected Cuisines:', selectedCuisines);
-    // Proceed to the next survey step or action
+  const handleNextClick = () => {
+    console.log('Selected cuisines:', selectedCuisines);
+    // Navigate to the next step or handle submission
   };
 
   return (
     <div className="survey-page">
-      <h1>What are your Top Three Cuisines?</h1>
-      <div className="options">
-        {cuisines.map((cuisine) => (
-          <button
-            key={cuisine.value}
-            className={`option-btn ${
-              selectedCuisines.includes(cuisine.value) ? 'selected' : ''
+      <h1 className="question">What are your Top Three Cuisines?</h1>
+      <div className="cuisine-options">
+        {cuisines.map((cuisine, index) => (
+          <div
+            key={index}
+            className={`cuisine-option ${
+              selectedCuisines.includes(cuisine.name) ? 'selected' : ''
             }`}
-            onClick={() => handleCuisineSelect(cuisine.value)}
+            style={{ backgroundImage: `url(${cuisine.image})` }}
+            onClick={() => handleCuisineClick(cuisine.name)}
           >
             {cuisine.name}
-          </button>
+          </div>
         ))}
       </div>
-      <button
-        className="cta-btn"
-        onClick={handleSubmit}
-        disabled={selectedCuisines.length < 3}
-      >
-        Submit
-      </button>
+      {selectedCuisines.length === 3 && (
+        <button className="next-btn" onClick={handleNextClick}>
+          Next
+        </button>
+      )}
     </div>
   );
 }
