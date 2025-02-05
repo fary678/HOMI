@@ -33,4 +33,4 @@ Users gain access to valuable information about potential neighborhoods, helping
 Frontend: React.js, CSS3  
 Backend: Node.js, Express.js  
 Database: MongoDB  
-AI/ML Algorithms: Not applicable (or specify any if used, e.g., TensorFlow or Scikit-learn)
+AI/ML Algorithms: TensorFlow, Scikit-learn
