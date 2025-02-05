@@ -30,7 +30,7 @@ By connecting users with realtors and auto dealerships, Homi streamlines the pro
 # Comprehensive Insights: 
 Users gain access to valuable information about potential neighborhoods, helping them make informed decisions.
 # Technologies Used
-Frontend: [Insert your chosen frontend technologies]
-Backend: [Insert your chosen backend technologies]
-Database: [Insert your chosen database]
-AI/ML Algorithms: [Detail any specific AI/ML technologies or frameworks used]
+Frontend: React.js, CSS3  
+Backend: Node.js, Express.js  
+Database: MongoDB  
+AI/ML Algorithms: Not applicable (or specify any if used, e.g., TensorFlow or Scikit-learn)
