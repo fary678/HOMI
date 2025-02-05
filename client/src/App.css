@@ -1,17 +1,47 @@
-.App-header {
-  background-color: #f8f4f1; /* Light beige for a soft aesthetic */
-  color: #333; /* Darker text for readability */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f4f1; /* Light beige background */
+  margin: 0;
+}
+
+form {
+  margin-top: 1rem;
   text-align: center;
-  padding: 2rem;
-  font-family: 'Arial', sans-serif;
 }
 
-.App-header h1 {
-  font-size: 2.5rem;
+form h2 {
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.App-header p {
-  font-size: 1.2rem;
-  font-weight: 300;
+form label {
+  font-size: 1rem;
+  color: #555;
+}
+
+input[type="number"] {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #555;
 }
