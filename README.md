@@ -80,3 +80,11 @@ Open your browser and navigate to http://localhost:3000 to access the applicatio
 2. The frontend runs on port 3000, and the backend server runs on port 5000 by default. Ensure these ports are free or configure them as needed.
 3. If any dependencies fail to install, check the package.json file for required versions.
 4. For debugging, ensure both the client and server logs show no errors.
+
+## Screenshots
+
+### Homepage
+![Homepage](assets/screenshots/homepage.png)
+
+### Survey Page
+![Survey Page](assets/screenshots/survey-page.png)
