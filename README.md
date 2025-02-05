@@ -34,3 +34,49 @@ Frontend: React.js, CSS3
 Backend: Node.js, Express.js  
 Database: MongoDB  
 AI/ML Algorithms: TensorFlow, Scikit-learn
+
+---
+
+# How to Run This Project Locally
+
+1. **Clone the Repository**  
+Open a terminal and run the following command:
+```bash
+git clone https://github.com/fary678/HOMI.git
+cd HOMI
+```
+
+2. **Install Dependencies**
+Navigate to the client directory and install the required dependencies:
+```bash
+cd client
+npm install
+```
+   
+Navigate to the server directory and install the required dependencies:
+```bash
+cd ../server
+npm install
+```
+
+3. **Run the Application**
+
+Start the client:
+```bash
+cd client
+npm start
+```
+Start the server:
+```bash
+cd ../server
+npm start
+```
+
+4. **Access the Application**
+Open your browser and navigate to http://localhost:3000 to access the application. Ensure that both the client and server are running.
+
+# Notes
+1. Ensure you have Node.js and npm installed on your machine before starting.
+2. The frontend runs on port 3000, and the backend server runs on port 5000 by default. Ensure these ports are free or configure them as needed.
+3. If any dependencies fail to install, check the package.json file for required versions.
+4. For debugging, ensure both the client and server logs show no errors.
