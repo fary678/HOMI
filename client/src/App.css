@@ -1,0 +1,17 @@
+.App-header {
+  background-color: #f8f4f1; /* Light beige for a soft aesthetic */
+  color: #333; /* Darker text for readability */
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
